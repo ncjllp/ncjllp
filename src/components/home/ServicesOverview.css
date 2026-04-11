@@ -1,0 +1,108 @@
+/* ================= ROOT SECTION ================= */
+.services-section {
+  position: relative;
+}
+
+/* OPTIONAL: smoother text rendering */
+.services-section {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ================= TITLE ENHANCEMENT ================= */
+.services-section h2 {
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+/* subtle underline animation */
+.services-section h2::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #d4af37;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* ================= CARD IMPROVEMENTS ================= */
+
+/* glass shine effect */
+.group:hover .relative.h-full::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.4),
+    transparent 70%
+  );
+  opacity: 0;
+  animation: shine 1s ease forwards;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* ================= HOVER DEPTH ================= */
+.group:hover .relative.h-full {
+  box-shadow: 0 25px 60px rgba(212, 175, 55, 0.25);
+}
+
+/* ================= ICON MICRO-INTERACTION ================= */
+.group:hover .w-20 {
+  transform: scale(1.12) rotate(3deg);
+}
+
+/* ================= LIST ANIMATION ================= */
+.group:hover li {
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+
+/* ================= GOLD GLOW PULSE ================= */
+@keyframes glowPulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.absolute.bg-\[\#d4af37\]\/10 {
+  animation: glowPulse 6s infinite ease-in-out;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .services-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 80px 6%;
+  }
+
+  .services-section h2 {
+    font-size: 2rem;
+  }
+}

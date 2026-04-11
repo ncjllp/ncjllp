@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 100vh;
+}
+
+.site-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.site-header {
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.site-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 72px;
+  gap: 20px;
+}
+
+.brand-link {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.site-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #374151;
+}
+
+.site-nav-link:hover {
+  color: #111;
+}
+
+.page-content {
+  min-height: calc(100vh - 144px);
+}
+
+main {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* All sections should be full-width by default */
+main > section,
+main > div {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.site-footer-inner {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-footer-inner p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+section {
+  margin-bottom: 0;
+}
+
+h1,
+h2 {
+  margin: 0 0 8px;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  max-width: 480px;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  padding: 10px;
+}
+
+@media (max-width: 720px) {
+  .site-shell,
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-header-inner,
+  .site-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .site-nav-list {
+    flex-wrap: wrap;
+  }
+}
+
+/* Dashboard Theme Adjustments */
+.dashboard-layout {
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
+
+.dashboard-sidebar {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.dashboard-sidebar a {
+  color: #ecf0f1;
+}
+
+.dashboard-sidebar a:hover {
+  color: #3498db;
+}
+
+.dashboard-content {
+  background-color: #ffffff;
+}

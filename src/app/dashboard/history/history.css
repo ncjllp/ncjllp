@@ -1,0 +1,18 @@
+.history-page {
+  padding: 20px;
+}
+
+.history-page h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.history-page ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.history-page li {
+  margin: 10px 0;
+  color: #555;
+}
